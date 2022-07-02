@@ -4,7 +4,7 @@
 
 The main functional unit in the **Animation Actor System** is the AnimNotifyState _TimedSpawnActor_(`UAnimNotifyState_SpawnAnimActor`).
 
-![Image of the NotifyState](resources/notifyState.jpg)
+![Image of the NotifyState](ressources/notifyState.jpg)
 
 
 This NotifyState is ready to use out of the box and should provide enough flexibility for most usecases.
@@ -14,13 +14,13 @@ If desired its baseclass `UAnimNotifyState_SpawnActorBase` can be extended with 
 ##TimedSpawnActor AnimNotifyState
 
 ###Actor Data
-![Image of the NotifyState](resources/actorData.jpg)
+![Image of the NotifyState](ressources/actorData.jpg)
 
 The `ActorData`-Property is used to assign a list of already existing actor classes.
 For each entry in the list, a corresponding actor of the specified class will be spawned and attached as per specifications.
 
 ###Construction Data
-![Image of the NotifyState](resources/constructionData.jpg)
+![Image of the NotifyState](ressources/constructionData.jpg)
 
 The `ConstructionData`-Property is used to dynamically create actors(these will be of class `AAnimActor`) from a list of construction data
 comprised of data that describes skeletal mesh components, data that describes static mesh components and their relationships.
