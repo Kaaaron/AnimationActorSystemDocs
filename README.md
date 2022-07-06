@@ -1,6 +1,6 @@
-#**_WIP_**
+# **_WIP_**
 
-#Animation Actor System
+# Animation Actor System
 
 The main functional unit in the **Animation Actor System** is the AnimNotifyState _TimedSpawnActor_(`UAnimNotifyState_SpawnAnimActor`).
 
@@ -11,15 +11,15 @@ This NotifyState is ready to use out of the box and should provide enough flexib
 
 If desired its baseclass `UAnimNotifyState_SpawnActorBase` can be extended with custom functionality like actor handling and custom component settings.
 
-##TimedSpawnActor AnimNotifyState
+## TimedSpawnActor AnimNotifyState
 
-###Actor Data
+### Actor Data
 ![Image of the NotifyState](ressources/actorData.jpg)
 
 The `ActorData`-Property is used to assign a list of already existing actor classes.
 For each entry in the list, a corresponding actor of the specified class will be spawned and attached as per specifications.
 
-###Construction Data
+### Construction Data
 ![Image of the NotifyState](ressources/constructionData.jpg)
 
 The `ConstructionData`-Property is used to dynamically create actors(these will be of class `AAnimActor`) from a list of construction data
@@ -38,7 +38,7 @@ The Combination of a list of `SkeletalData` and a list of `StatiData` will be cr
 
 Of course, just as with the `ActorData`, the `ConstructionData` can contain multiple actors with different setups, attachements, and offset-transforms.
 
-##Extending `UAnimNotifyState_SpawnActorBase`
+## Extending `UAnimNotifyState_SpawnActorBase`
 
 Extending the baseclass can be done both natively as well as in Blueprints.
 In Blueprint this is done by implementing the event `BlueprintSpawnActors`.
