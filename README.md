@@ -44,4 +44,15 @@ Extending the baseclass can be done both natively as well as in Blueprints.
 In Blueprint this is done by implementing the event `BlueprintSpawnActors`.
 Natively `virtual void SpawnActors(
 USkeletalMeshComponent* MeshComp, TArray<AActor*>& SpawnedActors);` should be overriden.
-Both have SpawnedActors as an output defined. Any actor that gets spawned should be added to that array, so
+Both have SpawnedActors as an output defined. Any actor that gets spawned should be added to that array, so it can be destroyed once the NotifyState Ends.
+
+## AnimActor Destruction Interface
+
+The System provides the Interface `IAnimActorDestructionInterface` to be implemented in any actor that you want to spawn via the `UAnimNotifyState_SpawnActorBase`.
+This is optional, you can assign any actor when spawning, independent whether it implements the interface or not.
+
+It contains the method `RequestDestruction` that allows the actor to return a bool when the notifystates requests to destroy it.
+By default this will return `true` which tells the notifystate to to go on and destroy it, when the NotifyState ends.
+
+**If `false` is returned the actor will not be automatically destroyed.** Then it is up to the actor/an external system to destroy it.
+
