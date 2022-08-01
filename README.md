@@ -1,5 +1,3 @@
-# **_WIP_**
-
 # Animation Actor System
 
 The main functional unit in the **Animation Actor System** is the AnimNotifyState _TimedSpawnActor_(`UAnimNotifyState_SpawnAnimActor`).
