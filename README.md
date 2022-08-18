@@ -1,3 +1,6 @@
+![Banner](ressources/banner_Documentation.png)
+
+
 To get started you can find the [QuickStart here](QuickStart.md)
 
 # Animation Actor System
@@ -11,7 +14,9 @@ This NotifyState is ready to use out of the box and should provide enough flexib
 
 If desired its baseclass `UAnimNotifyState_SpawnActorBase` can be extended with custom functionality like actor handling and custom component settings.
 
-## TimedSpawnActor AnimNotifyState
+## AnimNotifyState TimedSpawnActor
+
+Both the ActorData and the ConstructionData can be simply disabled for the NotifyState using the corresponding boolean flag.
 
 ### Actor Data
 ![Image of the NotifyState](ressources/actorData.jpg)
@@ -56,3 +61,7 @@ By default this will return `true` which tells the notifystate to to go on and d
 
 **If `false` is returned the actor will not be automatically destroyed.** Then it is up to the actor/an external system to destroy it.
 
+## Project Settings
+The Project settings allow global control over different properties.
+A more detailed view of the [Project settings here](ProjectSettings.md).
+![Image of the NotifyState](ressources/projectSettings.jpg)
