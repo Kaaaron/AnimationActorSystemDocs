@@ -1,9 +1,10 @@
 ![Banner](ressources/banner_Documentation.png)
 
 
-To get started you can find the [QuickStart here](QuickStart.md)
+
 
 # Animation Actor System
+### #To get started you can find the [QuickStart here](QuickStart.md)
 
 The main functional unit in the **Animation Actor System** is the AnimNotifyState _TimedSpawnActor_(`UAnimNotifyState_SpawnAnimActor`).
 
