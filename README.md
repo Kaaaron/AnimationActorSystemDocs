@@ -20,13 +20,13 @@ If desired its baseclass `UAnimNotifyState_SpawnActorBase` can be extended with 
 Both the ActorData and the ConstructionData can be simply disabled for the NotifyState using the corresponding boolean flag.
 
 ### Actor Data
-![Image of the NotifyState](ressources/actorData.jpg)
+![Image of the ActorData](ressources/actorData.jpg)
 
 The `ActorData`-property is used to assign a list of already existing actor classes.
 For each entry in the list, a corresponding actor of the specified class will be spawned and attached as per specifications.
 
 ### Construction Data
-![Image of the NotifyState](ressources/constructionData.jpg)
+![Image of the ConstructionData](ressources/constructionData.jpg)
 
 The `ConstructionData`-property is used to dynamically create actors(these will be of class `AAnimActor`) from a list of construction data
 comprised of data that describes skeletal mesh components, data that describes static mesh components and their relationships.
@@ -44,10 +44,16 @@ The combination of a list of `SkeletalData` and a list of `StatiData` will be cr
 
 Of course, just as with the `ActorData`, the `ConstructionData` can contain multiple actors with different setups, attachements, and offset-transforms.
 
+
+## Project Settings
+The added project settings allow global control over different properties.
+A more detailed view of the [project settings here](ProjectSettings.md).
+![Image of the project settings](ressources/projectSettings.jpg)
+
 ## Extending `UAnimNotifyState_SpawnActorBase`
 
 Extending the baseclass can be done both natively as well as in Blueprints.
-In Blueprint this is done by implementing the event `BlueprintSpawnActors`.
+In Blueprints this is done by implementing the event `BlueprintSpawnActors`.
 Natively `virtual void SpawnActors(
 USkeletalMeshComponent* MeshComp, TArray<AActor*>& SpawnedActors);` should be overriden.
 Both have SpawnedActors as an output defined. Any actor that gets spawned should be added to that array, so it can be destroyed once the NotifyState ends.
@@ -61,8 +67,3 @@ It contains the method `RequestDestruction` that allows the actor to return a bo
 By default this will return `true` which tells the notifystate to to go on and destroy it, when the NotifyState ends.
 
 **If `false` is returned the actor will not be automatically destroyed.** Then it is up to the actor/an external system to destroy it.
-
-## Project Settings
-The Project settings allow global control over different properties.
-A more detailed view of the [Project settings here](ProjectSettings.md).
-![Image of the NotifyState](ressources/projectSettings.jpg)
