@@ -1,4 +1,5 @@
-# QuickStart
+![Banner](ressources/banner_Quickstart.png)
+
 
 ## Welcome to the QuickStart of the Animation Actor System
 
